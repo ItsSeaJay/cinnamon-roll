@@ -28,6 +28,11 @@ async def roll(dice : str):
         return
 
     result = ', '.join(str(random.randint(1, limit)) for r in range(rolls))
-    await bot.say(result)
+    total = 0
+
+    for roll in range(rolls):
+        total += roll
+
+    await bot.say(result + str(total))
 
 bot.run('NDEwMTI4OTE4ODQ3NDIyNDc1.DVo84w.fuGi0d5IYNmefHNc6wD2lZeBSUo')
