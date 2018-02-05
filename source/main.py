@@ -27,12 +27,8 @@ async def roll(dice : str):
         await bot.say('Format has to be in NdN!')
         return
 
-    result = ', '.join(str(random.randint(1, limit)) for r in range(rolls))
-    total = 0
+    result += roll for r in range(rolls))
 
-    for roll in range(rolls):
-        total += roll
-
-    await bot.say(result + str(total))
+    await bot.say(str(result))
 
 bot.run('NDEwMTI4OTE4ODQ3NDIyNDc1.DVo84w.fuGi0d5IYNmefHNc6wD2lZeBSUo')
